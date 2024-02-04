@@ -1,0 +1,13 @@
+<div class="form">
+    <form action="http://localhost:4200/login"  (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+      <input type="text" formControlName="email" name="email">
+      <input type="password" formControlName="password" name="password" id="">
+      <button type="submit">Login</button>
+    </form>
+    <asl-google-signin-button class="google-btn" type='standard' size='medium'></asl-google-signin-button>
+    <!-- Place this tag where you want the button to render. -->
+    <button (click)="signInWithGitHub()" class="github-btn"><i class="fa-brands fa-github"></i><span>Se Connect avec Github</span></button>
+    <p>{{response}}</p>
+</div>
+  <router-outlet />
+  
